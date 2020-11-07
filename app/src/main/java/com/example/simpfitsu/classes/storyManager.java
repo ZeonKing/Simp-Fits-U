@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import static com.example.simpfitsu.MainActivity.current;
+import static com.example.simpfitsu.MainMenu.current;
 public class storyManager implements Iterable<Story> {
 
     private static List<Story>  storyList= new ArrayList<>();
