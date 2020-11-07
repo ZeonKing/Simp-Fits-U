@@ -10,31 +10,44 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/simpfitsu"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="52dp" />
+        android:contentDescription="TODO" />
 
     <Button
         android:id="@+id/Play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="297dp" />
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginRight="164dp"
+        android:text="@string/play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/Option"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Option"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="379dp" />
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="@string/option"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Play" />
 
     <Button
         android:id="@+id/help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Help"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="463dp" />
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginRight="165dp"
+        android:layout_marginBottom="86dp"
+        android:text="@string/help"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Option" />
 </androidx.constraintlayout.widget.ConstraintLayout>
