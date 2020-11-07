@@ -68,15 +68,6 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
-        Button helpButton = (Button) findViewById(R.id.main_help);
-        helpButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openHelp();
-            }
-        });
-
-
     }
     private boolean mIsBound = false;
     private MusicService mServ;
@@ -147,10 +138,6 @@ public class MainMenu extends AppCompatActivity {
 
     }
 
-    public void openHelp(){
-        Intent i = new Intent(this, Help.class);
-        startActivity(i);
-    }
     public void openOptions(){
         Intent i = new Intent(this, Options.class);
         startActivity(i);

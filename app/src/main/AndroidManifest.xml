@@ -11,8 +11,6 @@
         android:theme="@style/Theme.SimpFitsU">
         <activity android:name=".Options"
             android:theme="@style/Theme.SimpFitsU.NoActionBar"/>
-        <activity android:name=".Help"
-            android:theme="@style/Theme.SimpFitsU.NoActionBar"/>
 
         <service
             android:name=".MusicService"
