@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".Play">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
     <Button
         android:id="@+id/option1"
         android:layout_width="191dp"

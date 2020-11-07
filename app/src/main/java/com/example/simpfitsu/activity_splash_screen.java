@@ -1,6 +1,7 @@
 package com.example.simpfitsu;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -52,6 +53,10 @@ public class activity_splash_screen extends AppCompatActivity {
             }
         });
         mHomeWatcher.startWatch();
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
 
 
         ImageView areSimpImage = (ImageView) findViewById(R.id.areyouasimp_Imageview);

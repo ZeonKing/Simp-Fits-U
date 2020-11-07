@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainMenu">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -14,10 +18,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/simpfitsu"
-        android:contentDescription="TODO" />
+        />
 
     <Button
-        android:id="@+id/Play"
+        android:id="@+id/main_play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="86dp"
@@ -28,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/Option"
+        android:id="@+id/main_options"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="37dp"
@@ -36,10 +40,10 @@
         android:layout_marginRight="163dp"
         android:text="@string/option"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Play" />
+        app:layout_constraintTop_toBottomOf="@+id/main_play" />
 
     <Button
-        android:id="@+id/help"
+        android:id="@+id/main_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="37dp"
@@ -49,5 +53,5 @@
         android:text="@string/help"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Option" />
+        app:layout_constraintTop_toBottomOf="@+id/main_options" />
 </androidx.constraintlayout.widget.ConstraintLayout>

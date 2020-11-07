@@ -5,18 +5,26 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Main Menu"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SimpFitsU">
+        <activity android:name=".Options"
+            android:theme="@style/Theme.SimpFitsU.NoActionBar"/>
+        <activity android:name=".Help"
+            android:theme="@style/Theme.SimpFitsU.NoActionBar"/>
+
         <service
             android:name=".MusicService"
             android:enabled="true" />
-        <activity android:name=".MainMenu" />
-        <activity android:name=".Play" />
+
+        <activity android:name=".MainMenu"
+            android:theme="@style/Theme.SimpFitsU.NoActionBar"/>
+        <activity android:name=".Play"
+            android:theme="@style/Theme.SimpFitsU.NoActionBar"/>
         <activity
             android:name=".activity_splash_screen"
-            android:label="@string/title_activity_main"
+            android:label=""
             android:theme="@style/Theme.SimpFitsU.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

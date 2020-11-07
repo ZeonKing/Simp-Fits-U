@@ -1,6 +1,7 @@
 package com.example.simpfitsu;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -43,6 +44,10 @@ public class Play extends AppCompatActivity {
             }
         });
         mHomeWatcher.startWatch();
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
     }
 
     private boolean mIsBound = false;

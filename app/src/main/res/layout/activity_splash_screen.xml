@@ -6,11 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".activity_splash_screen">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
     <ImageView
         android:id="@+id/areyouasimp_Imageview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="136dp"
         android:alpha="0"
         android:contentDescription="areyouasimp_Image"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,20 +25,10 @@
         android:id="@+id/maybeyoureasimp_Imageview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="232dp"
+        android:layout_marginBottom="96dp"
         android:alpha="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/maybeyoureasimp" />
-
-    <ImageView
-        android:id="@+id/click_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:alpha="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/clickheretofindout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
