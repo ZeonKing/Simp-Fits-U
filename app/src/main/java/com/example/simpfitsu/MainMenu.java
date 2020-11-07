@@ -16,6 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.os.IBinder;
 import android.os.PowerManager;
 import android.view.View;
+import android.widget.Button;
 
 public class MainMenu extends AppCompatActivity {
 
@@ -25,6 +26,10 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
 
         doBindService();
         Intent music = new Intent();
@@ -47,6 +52,31 @@ public class MainMenu extends AppCompatActivity {
             }
         });
         mHomeWatcher.startWatch();
+
+        Button playButton = (Button) findViewById(R.id.main_play);
+        playButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPlay();
+            }
+        });
+
+        Button optionsButton = (Button) findViewById(R.id.main_options);
+        optionsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openOptions();
+            }
+        });
+
+        Button helpButton = (Button) findViewById(R.id.main_help);
+        helpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHelp();
+            }
+        });
+
 
     }
     private boolean mIsBound = false;
@@ -116,5 +146,18 @@ public class MainMenu extends AppCompatActivity {
             }
         }
 
+    }
+
+    public void openHelp(){
+        Intent i = new Intent(this, Help.class);
+        startActivity(i);
+    }
+    public void openOptions(){
+        Intent i = new Intent(this, Options.class);
+        startActivity(i);
+    }
+    public void openPlay(){
+        Intent i = new Intent(this, Play.class);
+        startActivity(i);
     }
 }
