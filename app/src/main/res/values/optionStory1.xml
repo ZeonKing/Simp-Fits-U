@@ -6,29 +6,6 @@
         <item>Sometimes</item>
         <item>Girls Needs Help, I Will Drop Everything And Be By Her Side</item>
     </string-array>
-    <string-array name="optionstory2">
-        <item>No way! Bros over Hoes</item>
-        <item>Ask her if it is urgent or not</item>
-        <item>You Call her while she's on the way home</item>
-        <item>I am speed</item>
-    </string-array>
-    <string-array name="optionstory3">
-        <item>What's a girl?</item>
-        <item>I am fuccboi</item>
-        <item>I have one or two</item>
-        <item>Real Men Stay Dedicated to One Girl</item>
-    </string-array>
-    <string-array name="optionstory4">
-        <item>I don't play games</item>
-        <item>I play for the plot</item>
-        <item>I play for the girls</item>
-        <item>I play for the waifus</item>
-    </string-array>
-    <string-array name="optionstory5">
-        <item>Let them suffer</item>
-        <item>Help if being asked</item>
-        <item></item>
-        <item></item>
-    </string-array>
+
 
 </resources>
