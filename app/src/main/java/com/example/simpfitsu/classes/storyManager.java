@@ -7,16 +7,17 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import static com.example.simpfitsu.MainMenu.current;
-public class storyManager implements Iterable<Story> {
+public class storyManager implements Iterable<String> {
 
-    private static List<Story>  storyList= new ArrayList<>();
-    String[] options = {"option1", "option2", "option3", "option4"};
+
+    private static List<String>  storyList= new ArrayList<>();
     public storyManager(){
-        storyList.add(new Story("story1",options));
-        storyList.add(new Story("story2",options));
-        storyList.add(new Story("story3",options));
-        storyList.add(new Story("story4",options));
-        storyList.add(new Story("story5",options));
+
+        storyList.add("story1");
+        storyList.add("story2");
+        storyList.add("story3");
+        storyList.add("story4");
+        storyList.add("story5");
     }
     public void shuffle(){
         Collections.shuffle(storyList); //Shuffles the story
@@ -32,7 +33,7 @@ public class storyManager implements Iterable<Story> {
             storyList.remove(0);
         }
     }
-    public List<Story> getStory() {
+    public List<String> getStory() {
         return storyList;
     }
 
@@ -50,7 +51,7 @@ public class storyManager implements Iterable<Story> {
 
     @NonNull
     @Override
-    public Iterator<Story> iterator() {
+    public Iterator<String> iterator() {
         return storyList.iterator();
     }
 }

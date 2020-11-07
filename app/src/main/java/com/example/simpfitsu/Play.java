@@ -11,7 +11,10 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PowerManager;
 
+import static androidx.core.graphics.drawable.IconCompat.getResources;
+
 public class Play extends AppCompatActivity {
+    String[] option1 = getResources().getStringArray(R.array.optionstory1);
 
     HomeWatcher mHomeWatcher;
 

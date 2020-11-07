@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 
-import com.example.simpfitsu.classes.Story;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -21,7 +20,7 @@ import android.widget.Button;
 public class MainMenu extends AppCompatActivity {
 
     HomeWatcher mHomeWatcher;
-    public static Story current;
+    public static String current;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
