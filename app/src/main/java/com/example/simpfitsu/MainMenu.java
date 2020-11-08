@@ -63,13 +63,6 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
-        Button optionsButton = (Button) findViewById(R.id.main_options);
-        optionsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openOptions();
-            }
-        });
 
     }
     private boolean mIsBound = false;
@@ -141,10 +134,7 @@ public class MainMenu extends AppCompatActivity {
 
     }
 
-    public void openOptions(){
-        Intent i = new Intent(this, Options.class);
-        startActivity(i);
-    }
+
     public void openPlay(){
         Intent i = new Intent(this, Play.class);
         manager = new storyManager();

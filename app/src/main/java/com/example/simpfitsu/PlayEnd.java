@@ -56,7 +56,7 @@ public class PlayEnd extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                backtoMainMenu();
+                finish();
             }
         });
 
@@ -86,6 +86,7 @@ public class PlayEnd extends AppCompatActivity {
             mp.start();
             simpImage4.animate().alpha(1f).setDuration(6000);
         }
+
 
 
     }

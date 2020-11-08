@@ -161,6 +161,7 @@ public class Play extends AppCompatActivity {
         if(manager.isEmpty()){
             Intent i = new Intent(this, PlayEnd.class);
             startActivity(i);
+            finish();
         }
     }
     public void buttonONclick(){
