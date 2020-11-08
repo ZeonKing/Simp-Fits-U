@@ -17,17 +17,18 @@ import android.os.IBinder;
 import android.os.PowerManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainMenu extends AppCompatActivity {
 
     HomeWatcher mHomeWatcher;
     public static storyManager manager;
     public static String current;
+    public static int score;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -146,6 +147,9 @@ public class MainMenu extends AppCompatActivity {
     }
     public void openPlay(){
         Intent i = new Intent(this, Play.class);
+        manager = new storyManager();
+        manager.startGame();
+        score =0;
         startActivity(i);
     }
 }
