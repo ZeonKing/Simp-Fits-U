@@ -161,7 +161,6 @@ public class Play extends AppCompatActivity {
     }
     public void buttonONclick(){
         btn1.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v) {
             score++;

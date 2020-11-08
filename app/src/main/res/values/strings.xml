@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SimpFitsU</string>
+    <string name="app_name">SFU</string>
     <string name="help">Help</string>
     <string name="title_activity_main">MainActivity</string>
     <!-- Strings used for fragments for navigation -->
