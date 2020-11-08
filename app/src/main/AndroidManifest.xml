@@ -29,7 +29,7 @@
             />
         <activity
             android:name=".activity_splash_screen"
-            android:label=""
+            android:label="@string/app_name"
             android:theme="@style/Theme.SimpFitsU.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
