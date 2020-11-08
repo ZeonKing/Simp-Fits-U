@@ -15,7 +15,7 @@
         android:id="@+id/areyouasimp_Imageview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="88dp"
         android:alpha="0"
         android:contentDescription="areyouasimp_Image"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,10 +26,21 @@
         android:id="@+id/maybeyoureasimp_Imageview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="220dp"
         android:alpha="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/maybeyoureasimp" />
+
+    <ImageView
+        android:id="@+id/poki_Imageview"
+        android:layout_width="225dp"
+        android:layout_height="235dp"
+        android:layout_marginTop="420dp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/poki" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

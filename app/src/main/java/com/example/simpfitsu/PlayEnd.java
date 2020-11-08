@@ -1,37 +1,23 @@
 package com.example.simpfitsu;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.IBinder;
 import android.os.PowerManager;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 
-
-/**
- *  Application Splash Screen
- */
-public class activity_splash_screen extends AppCompatActivity {
-
+public class PlayEnd extends AppCompatActivity {
     HomeWatcher mHomeWatcher;
-    Handler h = new Handler();
-    Runnable r;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.activity_play_end);
 
-        // Bind music service
         doBindService();
         Intent music = new Intent();
         music.setClass(this, MusicService.class);
@@ -53,33 +39,6 @@ public class activity_splash_screen extends AppCompatActivity {
             }
         });
         mHomeWatcher.startWatch();
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-
-
-        ImageView areSimpImage = (ImageView) findViewById(R.id.areyouasimp_Imageview);
-        ImageView maybeSimpImage = (ImageView) findViewById(R.id.maybeyoureasimp_Imageview);
-        ImageView pokiImage = (ImageView) findViewById(R.id.poki_Imageview);
-        areSimpImage.animate().alpha(1f).setDuration(2000);
-        maybeSimpImage.animate().alpha(1f).setDuration(8000);
-        pokiImage.animate().alpha(1f).setDuration(8000);
-
-
-        animationSkip();
-    }
-
-    public void animationSkip() {
-        r = new Runnable() {
-            @Override
-            public void run() {
-                Intent mainIntent = new Intent(activity_splash_screen.this, MainMenu.class);
-                activity_splash_screen.this.startActivity(mainIntent);
-                activity_splash_screen.this.finish();
-            }
-        };
-        h.postDelayed(r, 6000);
     }
 
     private boolean mIsBound = false;
@@ -118,6 +77,18 @@ public class activity_splash_screen extends AppCompatActivity {
         if (mServ != null) {
             mServ.resumeMusic();
         }
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        doUnbindService();
+        Intent music = new Intent();
+        music.setClass(this,MusicService.class);
+        stopService(music);
+
     }
 
     @Override
@@ -138,17 +109,4 @@ public class activity_splash_screen extends AppCompatActivity {
         }
 
     }
-
-        @Override
-        protected void onDestroy() {
-            super.onDestroy();
-
-            doUnbindService();
-            Intent music = new Intent();
-            music.setClass(this,MusicService.class);
-            stopService(music);
-    }
-
 }
-
-
