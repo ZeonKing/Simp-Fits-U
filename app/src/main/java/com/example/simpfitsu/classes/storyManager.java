@@ -25,8 +25,9 @@ public class storyManager implements Iterable<String> {
     public void startGame()
     {
        shuffle();
-       discard();
        draw();
+       discard();
+
     }
     public void discard() {
         if(isEmpty()==false){
