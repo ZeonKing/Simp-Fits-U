@@ -72,19 +72,19 @@ public class PlayEnd extends AppCompatActivity {
         if (score < 6) {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.lowest_simp);
             mp.start();
-            simpImage1.animate().alpha(1f).setDuration(6000);
+            simpImage1.animate().alpha(1f).setDuration(3000);
         } else if (score < 11) {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.low_simp);
             mp.start();
-            simpImage2.animate().alpha(1f).setDuration(6000);
+            simpImage2.animate().alpha(1f).setDuration(3000);
         } else if (score < 16) {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.enough_simp);
             mp.start();
-            simpImage3.animate().alpha(1f).setDuration(6000);
+            simpImage3.animate().alpha(1f).setDuration(3000);
         } else {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.top_simp);
             mp.start();
-            simpImage4.animate().alpha(1f).setDuration(6000);
+            simpImage4.animate().alpha(1f).setDuration(3000);
         }
 
 

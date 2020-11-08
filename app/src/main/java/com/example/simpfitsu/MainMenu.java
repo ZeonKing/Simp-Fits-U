@@ -4,6 +4,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.media.Image;
 import android.os.Bundle;
 
 import com.example.simpfitsu.classes.storyManager;
@@ -54,9 +55,8 @@ public class MainMenu extends AppCompatActivity {
             }
         });
         mHomeWatcher.startWatch();
-
-        Button playButton = (Button) findViewById(R.id.main_play);
-        playButton.setOnClickListener(new View.OnClickListener() {
+        ImageView playView =  findViewById(R.id.playView);
+        playView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openPlay();

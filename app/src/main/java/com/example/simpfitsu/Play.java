@@ -158,7 +158,7 @@ public class Play extends AppCompatActivity {
             manager.discard();
             setButton();
         }
-        if(manager.isEmpty()){
+        else if(manager.isEmpty()){
             Intent i = new Intent(this, PlayEnd.class);
             startActivity(i);
             finish();
