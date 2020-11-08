@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.simpfitsu.MusicService;
+import com.example.simpfitsu.classes.storyManager;
 
 import static com.example.simpfitsu.MainMenu.score;
 
@@ -41,6 +42,7 @@ public class PlayEnd extends AppCompatActivity {
                     mServ.pauseMusic();
                 }
             }
+
             @Override
             public void onHomeLongPressed() {
                 if (mServ != null) {
@@ -54,8 +56,7 @@ public class PlayEnd extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(this, MainMenu.class);
-                startActivity(i);
+                backtoMainMenu();
             }
         });
 
@@ -68,38 +69,34 @@ public class PlayEnd extends AppCompatActivity {
         ImageView simpImage4 = (ImageView) findViewById(R.id.top_end);
 
 
-        if (score < 5) {
+        if (score < 6) {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.lowest_simp);
             mp.start();
             simpImage1.animate().alpha(1f).setDuration(6000);
-        }
-        else if (score < 11) {
+        } else if (score < 11) {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.low_simp);
             mp.start();
             simpImage2.animate().alpha(1f).setDuration(6000);
-        }
-        else if (score < 16) {
+        } else if (score < 16) {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.enough_simp);
             mp.start();
             simpImage3.animate().alpha(1f).setDuration(6000);
-        }
-        else {
+        } else {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.top_simp);
             mp.start();
             simpImage4.animate().alpha(1f).setDuration(6000);
         }
 
 
-
     }
 
     private boolean mIsBound = false;
     private MusicService mServ;
-    private ServiceConnection Scon =new ServiceConnection(){
+    private ServiceConnection Scon = new ServiceConnection() {
 
         public void onServiceConnected(ComponentName name, IBinder
                 binder) {
-            mServ = ((MusicService.ServiceBinder)binder).getService();
+            mServ = ((MusicService.ServiceBinder) binder).getService();
         }
 
         public void onServiceDisconnected(ComponentName name) {
@@ -107,16 +104,14 @@ public class PlayEnd extends AppCompatActivity {
         }
     };
 
-    void doBindService(){
-        bindService(new Intent(this,MusicService.class),
+    void doBindService() {
+        bindService(new Intent(this, MusicService.class),
                 Scon, Context.BIND_AUTO_CREATE);
         mIsBound = true;
     }
 
-    void doUnbindService()
-    {
-        if(mIsBound)
-        {
+    void doUnbindService() {
+        if (mIsBound) {
             unbindService(Scon);
             mIsBound = false;
         }
@@ -138,7 +133,7 @@ public class PlayEnd extends AppCompatActivity {
 
         doUnbindService();
         Intent music = new Intent();
-        music.setClass(this,MusicService.class);
+        music.setClass(this, MusicService.class);
         stopService(music);
 
     }
