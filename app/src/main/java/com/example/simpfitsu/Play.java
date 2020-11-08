@@ -111,7 +111,7 @@ public class Play extends AppCompatActivity {
     }
 
     public void setButton(){
-        if(current=="story1")
+        if(current.equals("story1"))
         {
             imgView.setImageResource(R.drawable.story1);
             btn1.setText(option1[0]);
@@ -119,7 +119,7 @@ public class Play extends AppCompatActivity {
             btn3.setText(option1[2]);
             btn4.setText(option1[3]);
         }
-        else if(current=="story2")
+        else if(current.equals("story2"))
         {
             imgView.setImageResource(R.drawable.story2);
             btn1.setText(option2[0]);
@@ -127,7 +127,7 @@ public class Play extends AppCompatActivity {
             btn3.setText(option2[2]);
             btn4.setText(option2[3]);
         }
-        else if(current=="story3")
+        else if(current.equals("story3"))
         {
             imgView.setImageResource(R.drawable.story3);
             btn1.setText(option3[0]);
@@ -135,7 +135,7 @@ public class Play extends AppCompatActivity {
             btn3.setText(option3[2]);
             btn4.setText(option3[3]);
         }
-        else if(current=="story4")
+        else if(current.equals("story4"))
         {
             imgView.setImageResource(R.drawable.story4);
             btn1.setText(option4[0]);
@@ -143,7 +143,7 @@ public class Play extends AppCompatActivity {
             btn3.setText(option4[2]);
             btn4.setText(option4[3]);
         }
-        else if(current=="story5")
+        else if(current.equals("story5"))
         {
             imgView.setImageResource(R.drawable.story5);
             btn1.setText(option5[0]);
@@ -153,10 +153,14 @@ public class Play extends AppCompatActivity {
         }
     }
     public void newStory(){
-        if(manager.isEmpty()==false){
+        if(!manager.isEmpty()){
             manager.draw();
             manager.discard();
             setButton();
+        }
+        if(manager.isEmpty()){
+            Intent i = new Intent(this, PlayEnd.class);
+            startActivity(i);
         }
     }
     public void buttonONclick(){

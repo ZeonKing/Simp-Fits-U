@@ -54,31 +54,39 @@ public class PlayEnd extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i =
+                Intent i = new Intent(this, MainMenu.class);
+                startActivity(i);
             }
         });
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        ImageView simpImage1 = (ImageView) findViewById(R.id.)
+        ImageView simpImage1 = (ImageView) findViewById(R.id.lowest_end);
+        ImageView simpImage2 = (ImageView) findViewById(R.id.low_end);
+        ImageView simpImage3 = (ImageView) findViewById(R.id.enough_end);
+        ImageView simpImage4 = (ImageView) findViewById(R.id.top_end);
 
 
         if (score < 5) {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.lowest_simp);
             mp.start();
+            simpImage1.animate().alpha(1f).setDuration(6000);
         }
         else if (score < 11) {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.low_simp);
             mp.start();
+            simpImage2.animate().alpha(1f).setDuration(6000);
         }
         else if (score < 16) {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.enough_simp);
             mp.start();
+            simpImage3.animate().alpha(1f).setDuration(6000);
         }
         else {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.top_simp);
             mp.start();
+            simpImage4.animate().alpha(1f).setDuration(6000);
         }
 
 
