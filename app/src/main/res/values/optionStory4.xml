@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="optionstory4">
+        <item>I don\'t play games</item>
+        <item>I play for the plot</item>
+        <item>I play for the girls</item>
+        <item>I play for the waifus</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="optionstory5">
+        <item>Let them suffer</item>
+        <item>Help if being asked</item>
+        <item>Help to look like the nice guy</item>
+        <item>There\'s no need to fear! Why? Because Im here!</item>
+    </string-array>
+</resources>

@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PowerManager;
 
+
 public class Play extends AppCompatActivity {
     String[] option1 = getResources().getStringArray(R.array.optionstory1);
 
