@@ -20,10 +20,13 @@
 
         <activity
             android:name=".MainMenu"
+            android:label="Main Menu"
             android:theme="@style/Theme.SimpFitsU.NoActionBar" />
         <activity
             android:name=".Play"
-            android:theme="@style/Theme.SimpFitsU.NoActionBar" />
+            android:label=""
+            android:theme="@style/Theme.SimpFitsU.NoActionBar"
+            />
         <activity
             android:name=".activity_splash_screen"
             android:label=""
