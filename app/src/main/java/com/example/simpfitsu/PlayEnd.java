@@ -1,14 +1,24 @@
 package com.example.simpfitsu;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.media.Image;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PowerManager;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+
+import com.example.simpfitsu.MusicService;
+
+import static com.example.simpfitsu.MainMenu.score;
 
 public class PlayEnd extends AppCompatActivity {
     HomeWatcher mHomeWatcher;
@@ -39,6 +49,40 @@ public class PlayEnd extends AppCompatActivity {
             }
         });
         mHomeWatcher.startWatch();
+
+        Button backButton = (Button) findViewById(R.id.back_playend);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i =
+            }
+        });
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        ImageView simpImage1 = (ImageView) findViewById(R.id.)
+
+
+        if (score < 5) {
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.lowest_simp);
+            mp.start();
+        }
+        else if (score < 11) {
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.low_simp);
+            mp.start();
+        }
+        else if (score < 16) {
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.enough_simp);
+            mp.start();
+        }
+        else {
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.top_simp);
+            mp.start();
+        }
+
+
+
     }
 
     private boolean mIsBound = false;

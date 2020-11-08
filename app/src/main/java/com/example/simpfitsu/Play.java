@@ -10,9 +10,11 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PowerManager;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import static com.example.simpfitsu.MainMenu.current;
 import static com.example.simpfitsu.MainMenu.manager;

@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".PlayEnd">
 
+    <Button
+        android:id="@+id/back_playend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="204dp"
+        android:layout_marginLeft="204dp"
+        android:layout_marginBottom="32dp"
+        android:text="Back to Main Menu"
+        app:backgroundTint="#e09010"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
